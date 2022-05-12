@@ -15,12 +15,17 @@
                 <div class="col"></div>
                 <div class="col-6">
                     <?php
-                        $query
+                        $query = "SELECT * FROM artista;";
                         $result = mysqli_query($connessione, $query) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
                     ?>
                     <form action="" method="post">
                         <select class="form-select" name="artista" id="artista">
                             <option selected>Si scelga l'artista di cui si vuole vedere le opere</option>
+                            <?php
+                                while ($row = mysqli_fetch_assoc ($result)){
+                                    echo "<option value=" . $row['id_artista'] . ">" . $row['nome_artista'] . $row['cognome_artista'] . "</option>";
+                                }
+                            ?>
                         </select>
                     </form>
                 </div>
