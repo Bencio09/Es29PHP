@@ -33,7 +33,7 @@ include "./Pages/connessione.php";
                         <option selected>Si scelga l'artista di cui si vuole vedere le opere</option>
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value=" . $row['id_artista'] . ">" . $row['nome_artista'] . $row['cognome_artista'] . "</option>";
+                            echo "<option value=" . $row['id_artista'] . ">" . $row['nome_artista'] . " " . $row['cognome_artista'] . "</option>";
                         }
                         ?>
                     </select>

@@ -12,27 +12,28 @@ CREATE TABLE opera (
 id_opera INT NOT NULL PRIMARY KEY auto_increment,
 nome_opera VARCHAR(35) NOT NULL,
 tipo_opera VARCHAR(50) NOT NULL,
-id_artista INT NOT NULL REFERENCES artista(id_artista)
+id_artista INT NOT NULL REFERENCES artista(id_artista),
+image VARCHAR(50) NOT NULL
 );
 
-INSERT INTO `opera` (`id_opera`, `nome_opera`, `tipo_opera`, `id_artista`) VALUES
-(1, 'Mare', 'Pittura', 1),
-(2, 'Montagna blu', 'Scultura', 1),
-(3, 'Tramonto', 'Scultura', 3),
-(4, 'Alba', 'Pittura', 4),
-(5, 'Statua uomo', 'Scultura', 1),
-(6, 'Statua uomo 2', 'Scultura', 1),
-(7, 'Quadro bello', 'Pittura', 2),
-(8, 'Quadro montagna', 'Pittura', 2),
-(9, 'Aurora', 'Pittura', 3),
-(10, 'Firenze', 'Pittura', 5),
-(11, 'Roma', 'Pittura', 5),
-(12, 'Napoli', 'Pittura', 5);
+INSERT INTO `opera` (`id_opera`, `nome_opera`, `tipo_opera`, `id_artista`, `image`) VALUES
+(1, 'Guernica', 'Pittura', 1, '../Images/guernica.png'),
+(2, 'Le Nuvole', 'Pittura', 2, '../Images/lenuvole.png'),
+(3, 'Gioconda', 'Pittura', 5, '../Images/guernica.png'),
+(4, 'David', 'Scultura', 3, '../Images/david.png'),
+(5, 'La Pietà', 'Scultura', 3, '../Images/lapieta.png'),
+(6, 'L Annunciazione', 'Pittura', 5, '../Images/annunciazione.png'),
+(7, 'Notte Stellata', 'Pittura', 4, '../Images/nottestellata.png'),
+(8, 'Sentiero di notte in provenza', 'Pittura', 4, '../Images/sentierodinotteinprovenza.png'),
+(9, 'La persistenza della memoria', 'Pittura', 6, '../Images/lapersistenzadellamemoria.png'),
+(10, 'Donna Sdraiata', 'Pittura', 6, '../Images/donnasdraiata.png'),
+(11, 'Les demoiselles d Avignon', 'Pittura', 1, '../Images/lesdemoiselle.png'),
+(12, 'Lo stagno delle ninfee', 'Pittura', 2, '../Images/lostagnodelleninfee.png');
 
 INSERT INTO `artista` (`id_artista`, `cognome_artista`, `nome_artista`, `anno_nascita_artista`) VALUES
-(1, 'Rossi', 'Mario', '1980'),
-(2, 'Verdi', 'Carlo', '1978'),
-(3, 'Arancino', 'Giulia', '1977'),
-(4, 'Giolitti', 'Bruna', '1976'),
-(5, 'Maradona', 'Franco', '1990'),
-(6, 'Benigni', 'Mario', '1991');
+(1, 'Picasso', 'Pablo', '1881'),
+(2, 'Monet', 'Claude', '1840'),
+(3, 'Michelangelo', 'Buonarroti', '1475'),
+(4, 'Vincent', 'Van Gogh', '1853'),
+(5, 'Leonardo', 'Da Vinci', '1452'),
+(6, 'Salvator', 'Dalí', '1904');
