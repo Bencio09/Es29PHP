@@ -1,14 +1,14 @@
 <?php
 session_start();
-include "../Pages/connessione.php";
+include "./Pages/connessione.php";
 ?>
 <html>
 
 <head>
-    <link rel="stylesheet" href="../CSS/bootstrap.css" type="text/css">
-    <script src="../JS/bootstrap.js"></script>
-    <title>Autori</title>
-    <link rel="icon" href="../Images/favicon.ico">
+    <link rel="stylesheet" href="./CSS/bootstrap.css" type="text/css">
+    <script src="./JS/bootstrap.js"></script>
+    <title>Museo</title>
+    <link rel="icon" href="./Images/favicon.ico">
 </head>
 
 <body class="bg-dark">
