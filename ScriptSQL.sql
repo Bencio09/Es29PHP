@@ -19,9 +19,9 @@ image VARCHAR(50) NOT NULL
 INSERT INTO `opera` (`id_opera`, `nome_opera`, `tipo_opera`, `id_artista`, `image`) VALUES
 (1, 'Guernica', 'Pittura', 1, '../Images/guernica.png'),
 (2, 'Le Nuvole', 'Pittura', 2, '../Images/lenuvole.png'),
-(3, 'Gioconda', 'Pittura', 5, '../Images/guernica.png'),
+(3, 'Gioconda', 'Pittura', 5, '../Images/gioconda.png'),
 (4, 'David', 'Scultura', 3, '../Images/david.png'),
-(5, 'La Pietà', 'Scultura', 3, '../Images/lapieta.png'),
+(5, 'La Pietà', 'Scultura', 3, '../Images/pieta.png'),
 (6, 'L Annunciazione', 'Pittura', 5, '../Images/annunciazione.png'),
 (7, 'Notte Stellata', 'Pittura', 4, '../Images/nottestellata.png'),
 (8, 'Sentiero di notte in provenza', 'Pittura', 4, '../Images/sentierodinotteinprovenza.png'),
