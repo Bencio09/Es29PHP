@@ -1,32 +1,34 @@
 <?php
-    session_start();
-    include "./connessione.php";
-    $autore = $_POST["artista"];
+session_start();
+include "./connessione.php";
+$autore = $_POST["artista"];
 ?>
 <html>
-    <head>
-        <link rel="stylesheet" href="../CSS/bootstrap.css" type="text/css">
-        <script src="../JS/bootstrap.js"></script>
-        <title>Opere</title>
-        <link rel="icon" href="../Images/favicon.ico">
-    </head>
-    <body class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-6">
-                    <h1 class="alert alert-success" style="text-align:center">DATABASE OPERE</h1>
-                </div>
-                <div class="col"></div>
+
+<head>
+    <link rel="stylesheet" href="../CSS/bootstrap.css" type="text/css">
+    <script src="../JS/bootstrap.js"></script>
+    <title>Opere</title>
+    <link rel="icon" href="../Images/favicon.ico">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+                <h1 class="alert alert-success" style="text-align:center">DATABASE OPERE</h1>
             </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-6">
-                    <?php
-                        $query = "SELECT opera.nome_opera, opera.tipo_opera, opera.image FROM opera WHERE opera.id_artista = $autore;";
-                        $result = mysqli_query($connessione, $query) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+                <?php
+                $query = "SELECT opera.nome_opera, opera.tipo_opera, opera.image FROM opera WHERE opera.id_artista = $autore;";
+                $result = mysqli_query($connessione, $query) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "
                                 <div class='card' style='width: 18rem;'>
                                 <img src='$row[image]' class='card-img-top' alt='$row[nome_opera]'>
                                     <div class='card-body'>
@@ -36,13 +38,21 @@
                                 </div>
                                 <br>
                             ";
-                        }
-                    ?>
-                    
-                </div>
-                <div class="col"></div>
-                
+                }
+                ?>
+
             </div>
+            <div class="col"></div>
+
         </div>
-    </body>
+        <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <a href="../Index.php"><button class="btn btn-success" type="submit">Torna Indietro</button></a>
+        </div>
+        <div class="col"></div>
+        </div>
+    </div>
+</body>
+
 </html>

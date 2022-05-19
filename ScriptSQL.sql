@@ -33,7 +33,7 @@ INSERT INTO `opera` (`id_opera`, `nome_opera`, `tipo_opera`, `id_artista`, `imag
 INSERT INTO `artista` (`id_artista`, `cognome_artista`, `nome_artista`, `anno_nascita_artista`) VALUES
 (1, 'Picasso', 'Pablo', '1881'),
 (2, 'Monet', 'Claude', '1840'),
-(3, 'Michelangelo', 'Buonarroti', '1475'),
-(4, 'Vincent', 'Van Gogh', '1853'),
-(5, 'Leonardo', 'Da Vinci', '1452'),
-(6, 'Salvator', 'Dalí', '1904');
+(3, 'Buonarroti', 'Michelangelo', '1475'),
+(4, 'Van Gogh', 'Vincent', '1853'),
+(5, 'Da Vinci', 'Leonardo', '1452'),
+(6, 'Dalí', 'Salvator', '1904');
